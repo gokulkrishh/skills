@@ -12,10 +12,10 @@ A collection of custom [Agent Skills](https://agentskills.io) for AI coding agen
 
 ## Install
 
-### Via skills.sh
+### Via Agent Skills
 
 ```bash
-npx @anthropic-ai/skills add gokulkrishh/claude-skills
+npx @anthropic-ai/skills add github:gokulkrishh/claude-skills
 ```
 
 ### Via Claude Code (Commands)

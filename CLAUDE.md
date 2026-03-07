@@ -1,29 +1,31 @@
 # Claude Skills
 
-A collection of custom Claude Code skills for personal projects, published as `@gokulkrishh/claude-skills`.
+A collection of custom Agent Skills for AI coding agents, published as `@gokulkrishh/claude-skills`.
+
+Uses the [Agent Skills spec](https://agentskills.io/specification) — each skill is a directory with a `SKILL.md` file containing YAML frontmatter + instructions.
 
 ## Skills
 
 ### Model Council (`/council`)
 
-Multi-agent debate system inspired by Grok 4.20's council architecture. Four agents (Captain, Scholar, Logician, Contrarian) deliberate on queries through independent analysis, debate, and synthesis phases.
+Skill: `skills/model-council/SKILL.md`
 
-Skill file: `skills/model-council.md`
+### Code Review (`/review`)
 
-### PR Reviewer (`/review`)
+Skill: `skills/code-review/SKILL.md`
 
-Thorough code review checking for web security (OWASP), performance, accessibility, and code quality. Outputs structured findings with severity levels (Critical/Warning/Suggestion/Good) and a verdict.
+### Commit (`/commit`)
 
-Skill file: `skills/pr-reviewer.md`
+Skill: `skills/commit/SKILL.md`
 
 ## Project Structure
 
-- `skills/` — Skill markdown files (the prompts)
-- `index.js` — Package entry point
-- `package.json` — npm package config
+- `skills/<name>/SKILL.md` — Skill files (Agent Skills format)
+- `.claude/commands/` — Claude Code slash commands
+- `index.js` — npm package entry point
 
 ## Adding New Skills
 
-1. Create a new `.md` file in `skills/`
-2. Follow the existing skill format (trigger, phases, prompt)
-3. Register it in `index.js` skills map
+1. Create `skills/<name>/SKILL.md` with frontmatter (`name`, `description`)
+2. Add `.claude/commands/<name>.md` for Claude Code
+3. Register in `index.js` skills map

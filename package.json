@@ -1,7 +1,7 @@
 {
   "name": "@gokulkrishh/claude-skills",
   "version": "0.1.0",
-  "description": "Claude Code skills - Model Council and more",
+  "description": "Agent Skills for AI coding agents - model council, code review, and more",
   "type": "module",
   "main": "index.js",
   "files": [
@@ -9,11 +9,14 @@
     "index.js"
   ],
   "keywords": [
-    "claude",
+    "agent-skills",
     "claude-code",
-    "skills",
+    "copilot",
+    "cursor",
     "model-council",
-    "multi-agent"
+    "code-review",
+    "multi-agent",
+    "ai-skills"
   ],
   "author": "Gokulakrishnan Kalaikovan",
   "license": "MIT",

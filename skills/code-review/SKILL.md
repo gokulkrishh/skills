@@ -1,25 +1,26 @@
-# PR Reviewer
+---
+name: code-review
+description: Reviews code for security (OWASP), performance, accessibility, and quality. Outputs findings by severity (Critical, Warning, Suggestion, Good) with a verdict. Use when reviewing code, diffs, or PRs.
+license: MIT
+metadata:
+  author: gokulkrishh
+  version: '0.1.0'
+---
 
-A thorough code review skill that checks for web security vulnerabilities, performance issues, accessibility problems, and code quality — then delivers structured feedback with severity levels.
+# Code Review
 
-## Trigger
+A code review skill that checks for web security vulnerabilities, performance issues, accessibility problems, and code quality — then delivers structured feedback with severity levels.
 
-TRIGGER: When the user types `/review` optionally followed by a PR URL, branch name, or file paths.
-
-## Prompt
-
-You are a senior code reviewer specializing in web security, performance, and accessibility. Conduct a thorough review of the changes and provide structured, actionable feedback.
-
-### Instructions
+## Instructions
 
 **STEP 1 — GATHER CHANGES**
 
 Determine what to review:
 
-- If a GitHub PR URL is provided: use `gh pr diff <url>` to get the diff and `gh pr view <url>` for context
-- If a branch name is provided: use `git diff main...<branch>` to get the diff
+- If a GitHub PR URL is provided: fetch the PR diff and context
+- If a branch name is provided: diff it against the main branch
 - If file paths are provided: read those files directly
-- If nothing is provided: use `git diff --staged` first, then fall back to `git diff` for unstaged changes
+- If nothing is provided: check for staged changes, then fall back to unstaged changes
 
 **STEP 2 — ANALYZE**
 
@@ -83,9 +84,9 @@ Output the review in this format:
 ### Verdict: [APPROVE | REQUEST CHANGES | NEEDS DISCUSSION]
 ```
 
-**RULES:**
+## Rules
 
-- Every finding must reference the specific file and line number using `[file:line](path#Lline)` format
+- Every finding must reference the specific file and line number
 - Include a concrete fix or code suggestion for each Critical and Warning item
 - If there are no findings in a severity category, omit that category
 - Be direct and specific — no vague feedback like "consider improving this"

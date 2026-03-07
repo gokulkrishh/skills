@@ -1,0 +1,12 @@
+{
+  "name": "skills",
+  "description": "Reusable Agent Skills for AI coding agents — model council, code review, and commits.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Gokulakrishnan Kalaikovan"
+  },
+  "homepage": "https://github.com/gokulkrishh/skills",
+  "repository": "https://github.com/gokulkrishh/skills",
+  "license": "MIT",
+  "keywords": ["agent-skills", "model-council", "code-review", "conventional-commits"]
+}

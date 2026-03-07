@@ -32,11 +32,11 @@ Review the changes across these dimensions:
 - Broken authentication / authorization
 - Sensitive data exposure (hardcoded secrets, API keys, tokens)
 - Insecure dependencies (check for known CVEs if possible)
-- CSRF, open redirects, unsafe deserialization
+- CSRF, open redirects (including client-side navigation to unvalidated URLs), unsafe deserialization
 
 **Performance:**
 
-- Unnecessary re-renders (React: missing memo, unstable refs in deps)
+- Unnecessary re-renders (React: missing memo, unstable refs in deps, missing key props in lists)
 - Bundle size impact (large imports, tree-shaking issues)
 - N+1 queries, unoptimized loops, missing pagination
 - Memory leaks (event listeners, subscriptions not cleaned up)
@@ -86,7 +86,7 @@ Output the review in this format:
 
 ## Rules
 
-- Every finding must reference the specific file and line number
+- Every finding must reference the specific file and line number. If code is provided inline (not from a file), reference the relevant line within the snippet
 - Include a concrete fix or code suggestion for each Critical and Warning item
 - If there are no findings in a severity category, omit that category
 - Be direct and specific — no vague feedback like "consider improving this"

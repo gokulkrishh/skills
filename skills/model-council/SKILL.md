@@ -31,7 +31,7 @@ Simulate three independent agent perspectives on the user's query:
 **Scholar (Research & Facts):**
 
 - Search the codebase, documentation, or use web search for relevant context
-- Present factual findings, prior art, and evidence
+- Present factual findings, prior art, and evidence. When the user presents multiple options, evaluate each one individually
 - Be thorough and cite specific files/lines when applicable
 
 **Logician (Logic & Code):**
@@ -58,7 +58,7 @@ Have each agent respond to the others' Phase 1 analysis:
 
 **PHASE 3 — SYNTHESIS (Captain)**
 
-As the Captain (Coordinator), synthesize the debate:
+As the Captain (Coordinator), synthesize the debate using this exact template:
 
 ```
 ## Council Verdict
@@ -69,8 +69,7 @@ As the Captain (Coordinator), synthesize the debate:
 [The synthesized answer incorporating the strongest arguments from all agents]
 
 ### Key Insights
-- [Insight 1 from the debate]
-- [Insight 2 from the debate]
+- [Non-obvious or surprising points that emerged from the debate — not just restatements of known facts]
 
 ### Dissenting Points
 - [Any unresolved disagreements or risks flagged by the Contrarian]
@@ -84,5 +83,5 @@ As the Captain (Coordinator), synthesize the debate:
 - Each agent must stay in character throughout
 - The Contrarian MUST disagree with at least one aspect of the other agents' reasoning
 - The Captain must acknowledge dissent, not just override it
-- If the query is simple and doesn't benefit from debate, say so and answer directly
+- If the query is simple and doesn't benefit from debate, you MUST skip all phases, state that it doesn't warrant a council debate, and answer directly
 - Use the actual tools available (file reading, searching, web search, etc.) during the Scholar phase — don't just theorize

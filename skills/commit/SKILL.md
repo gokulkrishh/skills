@@ -25,7 +25,7 @@ Analyzes code changes and creates a [Conventional Commits](https://www.conventio
 Determine:
 
 - The **type** of change (see types below)
-- The **scope** — which module, component, or area is affected (optional but recommended)
+- The **scope** — which module, component, or area is affected (always include when one can be reasonably determined)
 - Whether this is a **breaking change**
 - The "why" behind the change, not just the "what"
 
@@ -44,7 +44,7 @@ Create the commit following the [Conventional Commits](https://www.conventionalc
 ### Format
 
 - **Title line:** `<type>(<scope>): <description>` — under 70 characters
-- **Body:** Explain what changed and why, 1-3 lines. Separate from title with a blank line.
+- **Body:** Explain why the change was made, with brief context on what changed. 1-3 lines. Separate from title with a blank line. Always include a body for non-trivial commits.
 - **Breaking changes:** Add `BREAKING CHANGE:` in the footer, or `!` after the type/scope (e.g. `feat!:` or `feat(api)!:`)
 
 ### Types
@@ -105,7 +105,7 @@ Files: <number of files changed>
 - Title must be under 70 characters
 - Title should be imperative mood ("add feature" not "added feature")
 - Description should be lowercase, no period at the end
-- Body should explain the why, not repeat the what
+- Body should explain why the change was made, not just restate the title
 - Do not commit files that look like secrets (.env, credentials, tokens)
 - If there are no changes to commit, say so and stop
 - Stage specific files, not `git add .` or `git add -A`

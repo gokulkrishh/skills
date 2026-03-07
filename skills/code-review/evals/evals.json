@@ -1,0 +1,39 @@
+{
+  "skill_name": "code-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this Express endpoint: app.get('/user', (req, res) => { const id = req.query.id; db.query('SELECT * FROM users WHERE id = ' + id); })",
+      "expected_output": "A review that catches the SQL injection vulnerability as Critical, with a fix suggestion using parameterized queries.",
+      "assertions": [
+        "SQL injection is flagged as Critical",
+        "The attack vector is briefly explained",
+        "A concrete fix using parameterized queries is suggested",
+        "The specific file and line are referenced",
+        "A verdict of REQUEST CHANGES is given"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review my changes on the current branch",
+      "expected_output": "The skill gathers the diff from the current branch, analyzes it, and outputs structured findings with severity levels.",
+      "assertions": [
+        "The review includes a Summary section",
+        "Findings are organized by severity (Critical, Warning, Suggestion, Good)",
+        "A Verdict is given (APPROVE, REQUEST CHANGES, or NEEDS DISCUSSION)",
+        "Empty severity categories are omitted"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review this React component: function UserList({ users }) { return <div>{users.map(u => <div onClick={() => window.location = u.website}>{u.name}</div>)}</div> }",
+      "expected_output": "Catches accessibility issues (no semantic HTML, no keyboard handling) and potential XSS via unvalidated URL redirect.",
+      "assertions": [
+        "Missing semantic HTML is flagged (div instead of ul/li or button)",
+        "Keyboard accessibility issue is identified (onClick without keyboard handler)",
+        "The unvalidated URL redirect is flagged as a security concern",
+        "Missing key prop on mapped elements is noted"
+      ]
+    }
+  ]
+}

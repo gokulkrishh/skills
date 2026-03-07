@@ -1,0 +1,38 @@
+{
+  "skill_name": "commit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just added a new login page component, commit it for me",
+      "expected_output": "A conventional commit with type feat, a scope related to auth/login, imperative mood title under 70 chars, and a body explaining why.",
+      "assertions": [
+        "The commit message starts with a valid type (feat, fix, docs, style, refactor, perf, test, build, ci, chore)",
+        "The title line is under 70 characters",
+        "The title uses imperative mood",
+        "The description is lowercase with no period at the end",
+        "A post-commit summary is shown with commit hash, branch, and file count"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "commit my changes",
+      "expected_output": "The skill analyzes the diff, determines the correct type and scope, and creates a well-formed conventional commit without needing more context from the user.",
+      "assertions": [
+        "The commit message follows <type>(<scope>): <description> format",
+        "The type matches the nature of the actual changes in the diff",
+        "The body explains what changed and why",
+        "Specific files are staged (not git add . or git add -A)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I renamed the API endpoint from /users to /v2/accounts, this is a breaking change. commit please",
+      "expected_output": "A conventional commit with breaking change indicator (! or BREAKING CHANGE footer).",
+      "assertions": [
+        "The commit includes a breaking change indicator (! after type/scope or BREAKING CHANGE: in footer)",
+        "The title mentions the API change",
+        "The body or footer explains what broke and what to use instead"
+      ]
+    }
+  ]
+}

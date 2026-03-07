@@ -1,0 +1,38 @@
+{
+  "skill_name": "model-council",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Should I use Next.js App Router or Remix for a new SaaS dashboard?",
+      "expected_output": "A full council debate with all 3 phases (independent analysis, debate, synthesis) and a Council Verdict with confidence level.",
+      "assertions": [
+        "All three agents (Scholar, Logician, Contrarian) provide independent analysis in Phase 1",
+        "The Contrarian disagrees with at least one aspect of the other agents' reasoning",
+        "Phase 2 shows agents responding to each other's points",
+        "The Council Verdict includes a confidence level (High, Medium, or Low)",
+        "Dissenting points are acknowledged in the final synthesis"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What is 2 + 2?",
+      "expected_output": "The skill recognizes this is too simple for a full council debate and answers directly.",
+      "assertions": [
+        "The skill identifies the query as too simple for a full debate",
+        "A direct answer is given without running all 3 phases"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're choosing between PostgreSQL, MongoDB, and DynamoDB for a real-time analytics platform processing 10M events/day. What should we use?",
+      "expected_output": "A thorough council debate with the Scholar researching each database's strengths, the Logician analyzing trade-offs, and the Contrarian challenging assumptions.",
+      "assertions": [
+        "The Scholar provides factual evidence about each database option",
+        "The Logician breaks down the decision with structured reasoning",
+        "The Contrarian challenges at least one assumption",
+        "The final verdict includes a clear recommended action",
+        "Key insights section surfaces non-obvious points from the debate"
+      ]
+    }
+  ]
+}

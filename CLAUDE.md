@@ -1,6 +1,6 @@
-# Claude Skills
+# Skills
 
-A collection of custom Agent Skills for AI coding agents, published as `@gokulkrishh/claude-skills`.
+A collection of custom Agent Skills for AI coding agents, published as `@gokulkrishh/skills`.
 
 Uses the [Agent Skills spec](https://agentskills.io/specification) — each skill is a directory with a `SKILL.md` file containing YAML frontmatter + instructions.
 

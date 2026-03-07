@@ -1,4 +1,4 @@
-# Claude Skills
+# Skills
 
 A collection of custom [Agent Skills](https://agentskills.io) for AI coding agents. Works with Claude Code, GitHub Copilot, Cursor, Cline, and more.
 
@@ -12,10 +12,10 @@ A collection of custom [Agent Skills](https://agentskills.io) for AI coding agen
 
 ## Install
 
-### Via Agent Skills
+### Via [skills.sh](https://skills.sh)
 
 ```bash
-npx @anthropic-ai/skills add github:gokulkrishh/claude-skills
+npx skills add https://github.com/gokulkrishh/skills
 ```
 
 ### Via Claude Code (Commands)
@@ -30,11 +30,11 @@ Clone this repo and the commands are available via `.claude/commands/`:
 ### As npm Package
 
 ```bash
-npm install @gokulkrishh/claude-skills
+npm install @gokulkrishh/skills
 ```
 
 ```js
-import { getSkill } from '@gokulkrishh/claude-skills'
+import { getSkill } from '@gokulkrishh/skills'
 
 const prompt = getSkill('model-council')
 ```

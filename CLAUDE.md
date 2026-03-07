@@ -29,3 +29,7 @@ Skill: `skills/commit/SKILL.md`
 1. Create `skills/<name>/SKILL.md` with frontmatter (`name`, `description`)
 2. Add `.claude/commands/<name>.md` for Claude Code
 3. Register in `index.js` skills map
+
+## Versioning
+
+Keep `package.json` and `.claude-plugin/plugin.json` versions in sync. Use **minor** for new skills, **patch** for fixes to existing skills.

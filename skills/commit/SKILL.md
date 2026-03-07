@@ -49,6 +49,20 @@ Types:
 - `style` — formatting, whitespace, naming
 - `perf` — performance improvement
 
+**STEP 4 — SUMMARY**
+
+After committing, show a summary:
+
+```
+Committed: <commit hash>
+Branch: <branch name>
+Files: <number of files changed>
+
+<commit title>
+
+<commit description>
+```
+
 ## Rules
 
 - Title must be under 70 characters

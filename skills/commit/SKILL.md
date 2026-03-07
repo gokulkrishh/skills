@@ -1,6 +1,6 @@
 ---
 name: commit
-description: Generates a commit with a clear title and description based on staged or unstaged changes. Analyzes the diff to determine the nature of the change (feature, fix, refactor, etc.) and writes a conventional commit message. Use when the user wants to commit code changes.
+description: Generates a conventional commit (conventionalcommits.org) with a clear title and description based on staged or unstaged changes. Analyzes the diff to determine the type, scope, and whether it's a breaking change. Use when the user wants to commit code changes.
 license: MIT
 metadata:
   author: gokulkrishh
@@ -9,7 +9,7 @@ metadata:
 
 # Commit
 
-Analyzes code changes and creates a well-structured git commit with a title and description.
+Analyzes code changes and creates a [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) compliant git commit.
 
 ## Instructions
 
@@ -24,30 +24,67 @@ Analyzes code changes and creates a well-structured git commit with a title and 
 
 Determine:
 
-- The nature of the change: feature, fix, refactor, docs, test, chore, style, perf
-- Which files/modules are affected
+- The **type** of change (see types below)
+- The **scope** — which module, component, or area is affected (optional but recommended)
+- Whether this is a **breaking change**
 - The "why" behind the change, not just the "what"
 
 **STEP 3 — COMMIT**
 
-Create the commit using this format:
+Create the commit following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification:
 
 ```
-<type>: <short title under 70 chars>
+<type>(<scope>): <description>
 
-<description explaining what changed and why, 1-3 lines>
+[optional body]
+
+[optional footer(s)]
 ```
 
-Types:
+### Format
 
-- `feat` — new feature or functionality
-- `fix` — bug fix
-- `refactor` — code restructuring without behavior change
-- `docs` — documentation changes
-- `test` — adding or updating tests
-- `chore` — tooling, deps, config changes
-- `style` — formatting, whitespace, naming
+- **Title line:** `<type>(<scope>): <description>` — under 70 characters
+- **Body:** Explain what changed and why, 1-3 lines. Separate from title with a blank line.
+- **Breaking changes:** Add `BREAKING CHANGE:` in the footer, or `!` after the type/scope (e.g. `feat!:` or `feat(api)!:`)
+
+### Types
+
+- `feat` — new feature (correlates with MINOR in SemVer)
+- `fix` — bug fix (correlates with PATCH in SemVer)
+- `docs` — documentation only
+- `style` — formatting, whitespace, semicolons (no code change)
+- `refactor` — code change that neither fixes a bug nor adds a feature
 - `perf` — performance improvement
+- `test` — adding or updating tests
+- `build` — build system or external dependencies
+- `ci` — CI configuration and scripts
+- `chore` — other changes that don't modify src or test files
+
+### Examples
+
+Simple:
+
+```
+feat(auth): add OAuth2 login flow
+```
+
+With body:
+
+```
+fix(parser): handle empty input without crashing
+
+Previously the parser would throw a NullPointerException when given
+an empty string. Now it returns an empty result set.
+```
+
+Breaking change:
+
+```
+feat(api)!: remove deprecated /users endpoint
+
+BREAKING CHANGE: The /users endpoint has been removed.
+Use /v2/users instead.
+```
 
 **STEP 4 — SUMMARY**
 
@@ -60,14 +97,16 @@ Files: <number of files changed>
 
 <commit title>
 
-<commit description>
+<commit body>
 ```
 
 ## Rules
 
 - Title must be under 70 characters
 - Title should be imperative mood ("add feature" not "added feature")
-- Description should explain the why, not repeat the what
+- Description should be lowercase, no period at the end
+- Body should explain the why, not repeat the what
 - Do not commit files that look like secrets (.env, credentials, tokens)
 - If there are no changes to commit, say so and stop
 - Stage specific files, not `git add .` or `git add -A`
+- Use `!` or `BREAKING CHANGE:` footer for breaking changes

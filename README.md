@@ -20,7 +20,7 @@ npx skills add https://github.com/gokulkrishh/skills
 
 ### Via Claude Code (Commands)
 
-Clone this repo and the commands are available via `.claude/commands/`:
+Clone this repo and the commands are available via `commands/`:
 
 ```bash
 /council Should I use RSC or client-side rendering for my app?
@@ -38,7 +38,7 @@ Clone this repo and the commands are available via `.claude/commands/`:
 
 1. Create a new directory in `skills/` with a `SKILL.md` file
 2. Add YAML frontmatter with `name` and `description` ([spec](https://agentskills.io/specification))
-3. Add a command file in `.claude/commands/` for Claude Code
+3. Add a command file in `commands/` for Claude Code
 
 ## License
 

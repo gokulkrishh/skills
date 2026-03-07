@@ -21,13 +21,13 @@ Skill: `skills/commit/SKILL.md`
 ## Project Structure
 
 - `skills/<name>/SKILL.md` — Skill files (Agent Skills format)
-- `.claude/commands/` — Claude Code slash commands
+- `commands/` — Claude Code slash commands
 - `.claude-plugin/` — Plugin manifest and marketplace config
 
 ## Adding New Skills
 
 1. Create `skills/<name>/SKILL.md` with frontmatter (`name`, `description`)
-2. Add `.claude/commands/<name>.md` for Claude Code
+2. Add `commands/<name>.md` for Claude Code
 3. Add skill path to `.claude-plugin/marketplace.json`
 
 ## Versioning

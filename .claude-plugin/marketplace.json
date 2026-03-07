@@ -16,7 +16,8 @@
         "./skills/model-council",
         "./skills/code-review",
         "./skills/commit"
-      ]
+      ],
+      "commands": "./commands/"
     }
   ]
 }

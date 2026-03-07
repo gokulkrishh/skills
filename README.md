@@ -27,16 +27,11 @@ Clone this repo and the commands are available via `.claude/commands/`:
 /review https://github.com/user/repo/pull/42
 ```
 
-### As npm Package
+### Via Claude Code (Plugin)
 
-```bash
-npm install @gokulkrishh/skills
 ```
-
-```js
-import { getSkill } from '@gokulkrishh/skills'
-
-const prompt = getSkill('model-council')
+/plugin marketplace add gokulkrishh/skills
+/plugin install skills@gokulkrishh-skills
 ```
 
 ## Creating a Skill
@@ -44,7 +39,6 @@ const prompt = getSkill('model-council')
 1. Create a new directory in `skills/` with a `SKILL.md` file
 2. Add YAML frontmatter with `name` and `description` ([spec](https://agentskills.io/specification))
 3. Add a command file in `.claude/commands/` for Claude Code
-4. Register it in `index.js`
 
 ## License
 

@@ -1,6 +1,6 @@
 # Skills
 
-A collection of custom Agent Skills for AI coding agents, published as `@gokulkrishh/skills`.
+A collection of custom Agent Skills for AI coding agents.
 
 Uses the [Agent Skills spec](https://agentskills.io/specification) — each skill is a directory with a `SKILL.md` file containing YAML frontmatter + instructions.
 
@@ -22,14 +22,14 @@ Skill: `skills/commit/SKILL.md`
 
 - `skills/<name>/SKILL.md` — Skill files (Agent Skills format)
 - `.claude/commands/` — Claude Code slash commands
-- `index.js` — npm package entry point
+- `.claude-plugin/` — Plugin manifest and marketplace config
 
 ## Adding New Skills
 
 1. Create `skills/<name>/SKILL.md` with frontmatter (`name`, `description`)
 2. Add `.claude/commands/<name>.md` for Claude Code
-3. Register in `index.js` skills map
+3. Add skill path to `.claude-plugin/marketplace.json`
 
 ## Versioning
 
-Keep `package.json` and `.claude-plugin/plugin.json` versions in sync. Use **minor** for new skills, **patch** for fixes to existing skills.
+Keep `.claude-plugin/plugin.json` version in sync. Use **minor** for new skills, **patch** for fixes to existing skills.

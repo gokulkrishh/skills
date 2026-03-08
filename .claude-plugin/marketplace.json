@@ -16,6 +16,7 @@
         "./skills/model-council",
         "./skills/code-review",
         "./skills/commit",
+        "./skills/ux-writing",
         "./skills/ux-writing"
       ],
       "commands": "./commands/"

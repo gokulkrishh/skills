@@ -4,11 +4,12 @@ A collection of custom [Agent Skills](https://agentskills.io) for AI coding agen
 
 ## Skills
 
-| Skill                                            | Command    | Description                                                                                                                                     |
-| ------------------------------------------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Model Council](./skills/model-council/SKILL.md) | `/council` | 4-agent debate system inspired by Grok 4.20's council. Agents (Captain, Scholar, Logician, Contrarian) analyze, debate, and synthesize answers. |
-| [Code Review](./skills/code-review/SKILL.md)     | `/review`  | Code review for security (OWASP), performance, accessibility, and code quality with severity-based findings.                                    |
-| [Commit](./skills/commit/SKILL.md)               | `/commit`  | Analyzes changes and creates a conventional commit with a clear title and description.                                                          |
+| Skill                                            | Command       | Description                                                                                                                                     |
+| ------------------------------------------------ | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Model Council](./skills/model-council/SKILL.md) | `/council`    | 4-agent debate system inspired by Grok 4.20's council. Agents (Captain, Scholar, Logician, Contrarian) analyze, debate, and synthesize answers. |
+| [Code Review](./skills/code-review/SKILL.md)     | `/review`     | Code review for security (OWASP), performance, accessibility, and code quality with severity-based findings.                                    |
+| [Commit](./skills/commit/SKILL.md)               | `/commit`     | Analyzes changes and creates a conventional commit with a clear title and description.                                                          |
+| [UX Writing](./skills/ux-writing/SKILL.md)       | `/ux-writing` | Write, review, and improve UX copy — error messages, button labels, empty states, tooltips, and all interface microcopy.                        |
 
 ## Install
 

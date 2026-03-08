@@ -2,9 +2,7 @@
 name: commit
 description: Generates a conventional commit (conventionalcommits.org) with a clear title and description based on staged or unstaged changes. Analyzes the diff to determine the type, scope, and whether it's a breaking change. Use when the user wants to commit code changes.
 license: MIT
-metadata:
-  author: gokulkrishh
-  version: '0.1.0'
+user-invokable: true
 ---
 
 # Commit

@@ -2,9 +2,7 @@
 name: model-council
 description: Multi-agent debate system for complex queries. Four agents (Scholar, Logician, Contrarian, Captain) analyze independently, debate, and synthesize a consensus. Use for deeper analysis, second opinions, or stress-testing decisions.
 license: MIT
-metadata:
-  author: gokulkrishh
-  version: '0.1.0'
+user-invokable: true
 ---
 
 # Model Council

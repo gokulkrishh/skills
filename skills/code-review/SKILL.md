@@ -1,10 +1,7 @@
 ---
 name: code-review
 description: Reviews code for security (OWASP), performance, accessibility, and quality. Outputs findings by severity (Critical, Warning, Suggestion, Good) with a verdict. Use when reviewing code, diffs, or PRs.
-license: MIT
-metadata:
-  author: gokulkrishh
-  version: '0.1.0'
+user-invokable: true
 ---
 
 # Code Review

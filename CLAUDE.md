@@ -18,6 +18,10 @@ Skill: `skills/code-review/SKILL.md`
 
 Skill: `skills/commit/SKILL.md`
 
+### UX Writing (`/ux-writing`)
+
+Skill: `skills/ux-writing/SKILL.md`
+
 ## Project Structure
 
 - `skills/<name>/SKILL.md` — Skill files (Agent Skills format)

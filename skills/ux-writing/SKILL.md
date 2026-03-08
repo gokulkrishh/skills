@@ -6,6 +6,7 @@ args:
   - name: target
     description: The feature, component, or screen needing copy (optional)
     required: false
+user-invokable: true
 ---
 
 # UX Writing

@@ -11,7 +11,7 @@
       "name": "skills",
       "description": "Reusable Agent Skills for AI coding agents — model council, code review, commits, and UX writing.",
       "source": "./",
-      "strict": false,
+      "strict": true,
       "skills": [
         "./skills/model-council",
         "./skills/code-review",

@@ -4,19 +4,20 @@
     "name": "Gokulakrishnan Kalaikovan"
   },
   "metadata": {
-    "description": "Reusable Agent Skills for AI coding agents — model council, code review, commits, and UX writing."
+    "description": "Reusable Agent Skills for AI coding agents — model council, code review, commits, UX writing, and web animation design."
   },
   "plugins": [
     {
       "name": "skills",
-      "description": "Reusable Agent Skills for AI coding agents — model council, code review, commits, and UX writing.",
+      "description": "Reusable Agent Skills for AI coding agents — model council, code review, commits, UX writing, and web animation design.",
       "source": "./",
       "strict": true,
       "skills": [
         "./skills/model-council",
         "./skills/code-review",
         "./skills/commit",
-        "./skills/ux-writing"
+        "./skills/ux-writing",
+        "./skills/web-animation-design"
       ],
       "commands": "./commands/"
     }

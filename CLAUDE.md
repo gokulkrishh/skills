@@ -22,6 +22,10 @@ Skill: `skills/commit/SKILL.md`
 
 Skill: `skills/ux-writing/SKILL.md`
 
+### Web Animation Design (`/web-animation-design`)
+
+Skill: `skills/web-animation-design/SKILL.md`
+
 ## Project Structure
 
 - `skills/<name>/SKILL.md` — Skill files (Agent Skills format)

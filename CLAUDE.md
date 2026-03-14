@@ -26,6 +26,10 @@ Skill: `skills/ux-writing/SKILL.md`
 
 Skill: `skills/web-animation-design/SKILL.md`
 
+### Motion Base UI (`/motion-base-ui`)
+
+Skill: `skills/motion-base-ui/SKILL.md`
+
 ## Project Structure
 
 - `skills/<name>/SKILL.md` — Skill files (Agent Skills format)

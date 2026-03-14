@@ -1,7 +1,7 @@
 {
   "name": "skills",
   "description": "Reusable Agent Skills for AI coding agents — model council, code review, and commits.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "Gokulakrishnan Kalaikovan"
   },
@@ -14,6 +14,7 @@
     "code-review",
     "conventional-commits",
     "ux-writing",
-    "web-animation-design"
+    "web-animation-design",
+    "motion-base-ui"
   ]
 }

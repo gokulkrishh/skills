@@ -18,7 +18,8 @@
         "./skills/commit",
         "./skills/ux-writing",
         "./skills/web-animation-design",
-        "./skills/motion-base-ui"
+        "./skills/motion-base-ui",
+        "./skills/no-use-effect"
       ],
       "commands": "./commands/"
     }

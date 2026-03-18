@@ -30,6 +30,10 @@ Skill: `skills/web-animation-design/SKILL.md`
 
 Skill: `skills/motion-base-ui/SKILL.md`
 
+### No useEffect (`/no-use-effect`)
+
+Skill: `skills/no-use-effect/SKILL.md`
+
 ## Project Structure
 
 - `skills/<name>/SKILL.md` — Skill files (Agent Skills format)

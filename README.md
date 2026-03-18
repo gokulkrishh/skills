@@ -10,6 +10,9 @@ A collection of custom [Agent Skills](https://agentskills.io) for AI coding agen
 | [Code Review](./skills/code-review/SKILL.md)     | `/review`     | Code review for security (OWASP), performance, accessibility, and code quality with severity-based findings.                                    |
 | [Commit](./skills/commit/SKILL.md)               | `/commit`     | Analyzes changes and creates a conventional commit with a clear title and description.                                                          |
 | [UX Writing](./skills/ux-writing/SKILL.md)       | `/ux-writing` | Write, review, and improve UX copy — error messages, button labels, empty states, tooltips, and all interface microcopy.                        |
+| [Web Animation Design](./skills/web-animation-design/SKILL.md) | `/web-animation-design` | Design and implement web animations that feel natural and purposeful, covering easing, springs, transitions, and accessibility. |
+| [Motion Base UI](./skills/motion-base-ui/SKILL.md) | `/motion-base-ui` | Animate Base UI components (Menu, Dialog, Popover, Tooltip, Switch, etc.) with Motion for React.                              |
+| [No useEffect](./skills/no-use-effect/SKILL.md)   | `/no-use-effect` | Enforce the no-useEffect rule — use derived state, event handlers, data-fetching libraries, or `useMountEffect` instead.       |
 
 ## Install
 

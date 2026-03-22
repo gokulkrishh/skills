@@ -6,7 +6,6 @@ argument-hint: "[optional: commit scope or message hint]"
 model: haiku
 effort: low
 user-invocable: true
-context: 'fork'
 ---
 
 ## Instructions

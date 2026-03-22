@@ -4,34 +4,59 @@
     {
       "id": 1,
       "prompt": "I just added a new login page component, commit it for me",
-      "expected_output": "A conventional commit with type feat, a scope related to auth/login, imperative mood title under 70 chars, and a body explaining why.",
+      "expected_output": "A conventional commit with type feat, a concise lowercase message under 72 characters, no trailing period.",
       "assertions": [
-        "The commit message starts with a valid type (feat, fix, docs, style, refactor, perf, test, build, ci, chore)",
-        "The title line is under 70 characters",
-        "The title uses imperative mood",
-        "The description is lowercase with no period at the end",
-        "A post-commit summary is shown with commit hash, branch, and file count"
+        "The commit message starts with feat:",
+        "The message after the type prefix is lowercase",
+        "The full message is under 72 characters",
+        "No trailing period on the message",
+        "The commit hash and message are shown after committing"
       ]
     },
     {
       "id": 2,
       "prompt": "commit my changes",
-      "expected_output": "The skill analyzes the diff, determines the correct type and scope, and creates a well-formed conventional commit without needing more context from the user.",
+      "expected_output": "The skill analyzes the diff, determines the correct type, and creates a well-formed conventional commit without needing more context from the user.",
       "assertions": [
-        "The commit message follows <type>(<scope>): <description> format",
-        "The type matches the nature of the actual changes in the diff",
-        "The body explains what changed and why",
-        "Specific files are staged (not git add . or git add -A)"
+        "The commit message follows type: description format",
+        "The type matches the nature of the actual changes in the diff (feat, fix, refactor, docs, or chore)",
+        "The message is lowercase after the type prefix with no trailing period",
+        "Specific files are staged (not git add . or git add -A)",
+        "The commit uses the HEREDOC format for the commit message"
       ]
     },
     {
       "id": 3,
-      "prompt": "I renamed the API endpoint from /users to /v2/accounts, this is a breaking change. commit please",
-      "expected_output": "A conventional commit with breaking change indicator (! or BREAKING CHANGE footer).",
+      "prompt": "I fixed a null pointer crash in the checkout flow, commit please",
+      "expected_output": "A conventional commit with type fix and a concise description of the bug fix.",
       "assertions": [
-        "The commit includes a breaking change indicator (! after type/scope or BREAKING CHANGE: in footer)",
-        "The title mentions the API change",
-        "The body or footer explains what broke and what to use instead"
+        "The commit message starts with fix:",
+        "The description mentions the fix clearly",
+        "The message is a single line under 72 characters",
+        "The message is lowercase after the type prefix with no trailing period",
+        "The commit hash and message are shown after committing"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I updated the README with installation instructions",
+      "expected_output": "A conventional commit with type docs and a concise description.",
+      "assertions": [
+        "The commit message starts with docs:",
+        "The message is lowercase after the type prefix with no trailing period",
+        "The full message is under 72 characters",
+        "Does NOT push to remote"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I restructured the auth module to split it into separate files but nothing changed functionally",
+      "expected_output": "A conventional commit with type refactor describing the restructuring.",
+      "assertions": [
+        "The commit message starts with refactor:",
+        "The message is lowercase after the type prefix with no trailing period",
+        "The full message is under 72 characters",
+        "The message describes the restructuring without implying behavior change"
       ]
     }
   ]

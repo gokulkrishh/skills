@@ -1,110 +1,43 @@
 ---
 name: commit
-description: Generates a conventional commit (conventionalcommits.org) with a clear title and description based on staged or unstaged changes. Analyzes the diff to determine the type, scope, and whether it's a breaking change. Use when the user wants to commit code changes.
-license: MIT
-user-invokable: true
+description: >
+  Generates a conventional commit (feat/fix/refactor/docs/chore) with a clear, lowercase message based on staged or unstaged changes.
+argument-hint: "[optional: commit scope or message hint]"
+model: haiku
+effort: low
+user-invocable: true
 ---
-
-# Commit
-
-Analyzes code changes and creates a [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) compliant git commit.
 
 ## Instructions
 
-**STEP 1 — GATHER CHANGES**
-
-- Run `git status` to see what files have changed
-- Run `git diff --staged` to see staged changes
-- If nothing is staged, run `git diff` for unstaged changes and stage them
-- Run `git log --oneline -5` to understand the repo's commit style
-
-**STEP 2 — ANALYZE**
-
-Determine:
-
-- The **type** of change (see types below)
-- The **scope** — which module, component, or area is affected (always include when one can be reasonably determined)
-- Whether this is a **breaking change**
-- The "why" behind the change, not just the "what"
-
-**STEP 3 — COMMIT**
-
-Create the commit following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification:
+1. Run `git diff --staged` to see staged changes. If nothing is staged, run `git diff` to see unstaged changes and stage them with `git add` (specific files, not `-A`).
+2. Analyze the diff and determine the commit type:
+   - `feat:` — new feature or functionality
+   - `fix:` — bug fix or correction
+   - `refactor:` — code restructuring without behavior change
+   - `docs:` — documentation only
+   - `chore:` — tooling, deps, config changes
+3. Write a concise, lowercase conventional commit message (no period at end). Focus on the "what" in a single line.
+4. Commit using:
 
 ```
-<type>(<scope>): <description>
+git commit -m "$(cat <<'EOF'
+type: message here
 
-[optional body]
-
-[optional footer(s)]
+EOF
+)"
 ```
 
-### Format
+5. Do NOT push unless explicitly asked.
+6. Show the commit hash and message after committing.
 
-- **Title line:** `<type>(<scope>): <description>` — under 70 characters
-- **Body:** Explain why the change was made, with brief context on what changed. 1-3 lines. Separate from title with a blank line. Always include a body for non-trivial commits.
-- **Breaking changes:** Add `BREAKING CHANGE:` in the footer, or `!` after the type/scope (e.g. `feat!:` or `feat(api)!:`)
+## Style Rules
 
-### Types
-
-- `feat` — new feature (correlates with MINOR in SemVer)
-- `fix` — bug fix (correlates with PATCH in SemVer)
-- `docs` — documentation only
-- `style` — formatting, whitespace, semicolons (no code change)
-- `refactor` — code change that neither fixes a bug nor adds a feature
-- `perf` — performance improvement
-- `test` — adding or updating tests
-- `build` — build system or external dependencies
-- `ci` — CI configuration and scripts
-- `chore` — other changes that don't modify src or test files
-
-### Examples
-
-Simple:
-
-```
-feat(auth): add OAuth2 login flow
-```
-
-With body:
-
-```
-fix(parser): handle empty input without crashing
-
-Previously the parser would throw a NullPointerException when given
-an empty string. Now it returns an empty result set.
-```
-
-Breaking change:
-
-```
-feat(api)!: remove deprecated /users endpoint
-
-BREAKING CHANGE: The /users endpoint has been removed.
-Use /v2/users instead.
-```
-
-**STEP 4 — SUMMARY**
-
-After committing, show a summary:
-
-```
-Committed: <commit hash>
-Branch: <branch name>
-Files: <number of files changed>
-
-<commit title>
-
-<commit body>
-```
-
-## Rules
-
-- Title must be under 70 characters
-- Title should be imperative mood ("add feature" not "added feature")
-- Description should be lowercase, no period at the end
-- Body should explain why the change was made, not just restate the title
-- Do not commit files that look like secrets (.env, credentials, tokens)
-- If there are no changes to commit, say so and stop
-- Stage specific files, not `git add .` or `git add -A`
-- Use `!` or `BREAKING CHANGE:` footer for breaking changes
+- Always lowercase after the type prefix
+- No trailing period
+- Keep under 72 characters
+- Single line — no multi-line body unless the change is complex
+- Examples from this repo:
+  - `fix: simplify user authentication fallback rendering and improve loading skeleton styles`
+  - `feat: add motion-plus dependency and remove setup script for auth token injection`
+  - `refactor: remove unused SignIn import from DemoState component`

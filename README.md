@@ -13,6 +13,7 @@ A collection of custom [Agent Skills](https://agentskills.io) for AI coding agen
 | [Web Animation Design](./skills/web-animation-design/SKILL.md) | `/web-animation-design` | Design and implement web animations that feel natural and purposeful, covering easing, springs, transitions, and accessibility. |
 | [Motion Base UI](./skills/motion-base-ui/SKILL.md) | `/motion-base-ui` | Animate Base UI components (Menu, Dialog, Popover, Tooltip, Switch, etc.) with Motion for React.                              |
 | [No useEffect](./skills/no-use-effect/SKILL.md)   | `/no-use-effect` | Enforce the no-useEffect rule — use derived state, event handlers, data-fetching libraries, or `useMountEffect` instead.       |
+| [Plan](./skills/plan/SKILL.md)                     | `/plan`          | Iterative deep planning with critiques and alternatives for complex design decisions and architecture choices.                  |
 
 ## Install
 

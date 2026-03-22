@@ -34,6 +34,10 @@ Skill: `skills/motion-base-ui/SKILL.md`
 
 Skill: `skills/no-use-effect/SKILL.md`
 
+### Plan (`/plan`)
+
+Skill: `skills/plan/SKILL.md`
+
 ## Project Structure
 
 - `skills/<name>/SKILL.md` — Skill files (Agent Skills format)

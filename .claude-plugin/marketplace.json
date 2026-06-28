@@ -20,7 +20,8 @@
         "./skills/web-animation-design",
         "./skills/motion-base-ui",
         "./skills/no-use-effect",
-        "./skills/plan"
+        "./skills/plan",
+        "./skills/teach"
       ],
       "commands": "./commands/"
     }

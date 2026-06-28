@@ -38,6 +38,10 @@ Skill: `skills/no-use-effect/SKILL.md`
 
 Skill: `skills/plan/SKILL.md`
 
+### Teach (`/teach`)
+
+Skill: `skills/teach/SKILL.md`
+
 ## Project Structure
 
 - `skills/<name>/SKILL.md` — Skill files (Agent Skills format)
